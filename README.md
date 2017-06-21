@@ -1,7 +1,11 @@
 # Real Estate Site
 
-____
-> **The service  had been done for estate site.It has functionality such filter by price,by new building,location and actual advertises**
+
+```
+The service  had been done for estate site.It has functionality such filter by price,
+by new building,location and actual advertises
+
+```
 
 ### Requirement
 Needed to install flask and other modules:
