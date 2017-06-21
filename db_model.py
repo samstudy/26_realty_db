@@ -1,5 +1,4 @@
-from app_db_init import app
-from app_db_init import db
+from app_db_init import app, db
 
 
 class Flats(db.Model):

@@ -2,8 +2,7 @@ import argparse
 import sys
 import os
 import json
-from app_db_init import app
-from app_db_init import db
+from app_db_init import app, db
 from db_model import Flats
 
 
@@ -22,10 +21,10 @@ def load_data(filepath):
 
 def insert_into_db_data(apartments):
     for ap in apartments:
-        room = Flats(ap['id'] ,ap['has_balcony'], ap['oblast_district'], 
-                ap['construction_year'],ap['description'], ap['settlement'], ap['rooms_number'],
-                ap['living_area'], ap['address'], ap['price'], ap['premise_area'],
-                ap['under_construction'], ap['is_expired'])
+        room = Flats(ap['id'], ap['has_balcony'], ap['oblast_district'], 
+                     ap['construction_year'], ap['description'], ap['settlement'],
+                     ap['rooms_number'],ap['living_area'], ap['address'], ap['price'],
+                     ap['premise_area'],ap['under_construction'], ap['is_expired'])
         db.session.add(room)
         db.session.commit()
 
