@@ -3,15 +3,16 @@ from app_db_init import app, db
 
 class Flats(db.Model):
     __tablename__='ASSETS'
-    room_id = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.Integer, primary_key=True)
+    room_id = db.Column(db.Integer)
     has_balcony = db.Column(db.Boolean)
-    oblast_district = db.Column(db.Text(120))
+    oblast_district = db.Column(db.Text)
     construction_year = db.Column(db.Integer)
-    description = db.Column(db.Text(1000))
-    settlement = db.Column(db.Text(100))
+    description = db.Column(db.Text)
+    settlement = db.Column(db.Text)
     rooms_number = db.Column(db.Integer)
     living_area = db.Column(db.Float)
-    address = db.Column(db.Text(100))
+    address = db.Column(db.Text)
     price = db.Column(db.Integer)
     premise_area = db.Column(db.Float)
     under_construction = db.Column(db.Boolean)
@@ -21,7 +22,7 @@ class Flats(db.Model):
     def __init__(self, room_id, has_balcony, oblast_district, construction_year,
                   description, settlement, rooms_number, living_area,
                   address, price, premise_area, under_construction, is_expired):
-        self.id = room_id
+        self.room_id = room_id
         self.has_balcony = has_balcony
         self.oblast_district = oblast_district
         self.construction_year = construction_year
