@@ -26,4 +26,4 @@ def ads_list(page=1):
                             oblast_district = oblast_district)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0')
