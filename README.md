@@ -1,27 +1,37 @@
 # Real Estate Site
 
 
-```
-The service  had been done for estate site.It has functionality such filter by price,
-by new building,location and actual advertises
+### According a scenario we are helped the company migrate from excell db to DBMS
+
+
+### The tasks what have been done
+  - Connect to DBMS
+  - Prepare the script for migrate from JSON to DB,expired advertisement should be deleted,but must be hidded
+  - Include functionality such filter by price,by new building,location
+  - Pagination
+
+
+### The steps how to use:
+- Create a sample json file
+- Create DB
+- Insert into DB information from sample file
+- Push the server
+
+
+### Deploy on localhost
+
+Example of frontend launch on Linux, Python 3.5:
+
+```bash
+
+python3 create_sample_json.py
+python3 create_db.py
+python3 insert_into_db.py
+python3 server.py
 
 ```
 
-### Requirement
-Needed to install flask and other modules:
-```
-pip install -r requirement.
-```
-### Usage:
-```
-On console run the script :
-```
-*   python create_db.py
-*   python insert_into_db.py(you should give a path where located your json information which will be inputed on db)
-*   python server
-```
-then open on browser: localhost:5000
-``` 
+Open page [localhost:5000](http://localhost:5000) in browser.
 
 # Project Goals
 
