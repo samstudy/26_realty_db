@@ -3,8 +3,7 @@ from app_db_init import app, db
 
 class Flats(db.Model):
     __tablename__='ASSETS'
-    id = db.Column(db.Integer, primary_key=True)
-    room_id = db.Column(db.Integer)
+    room_id = db.Column(db.Integer, primary_key=True)
     has_balcony = db.Column(db.Boolean)
     oblast_district = db.Column(db.Text)
     construction_year = db.Column(db.Integer)
