@@ -4,6 +4,7 @@ from db_model import Flats
 
 
 @app.route("/", methods=['GET'])
+@app.route("/<int:page>")
 def ads_list(page=1):
     post_per_page = 10
     ads = Flats.query.filter(Flats.is_expired == False)
@@ -27,3 +28,7 @@ def ads_list(page=1):
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
+
+
+
+
